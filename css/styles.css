@@ -1,0 +1,679 @@
+/* Imports */
+
+
+@import url('https://allfont.net/allfont.css?fonts=agency-fb');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+
+
+
+/*Basic styling*/
+
+:root {
+    --yellow: #d3c48c;
+    --black: #0d0d0d;
+    --lightgrey: #dbe2e6;
+    --brown: #470506;
+    --lightblue: #D4DCF2;
+    --lightred: #e6dbdf;
+    --lightgreen: #b6e1c1;
+    --darkgreen: #71906e;
+
+    font-family: "Agency FB";
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+p {
+    font-family: "Oswald";
+}
+
+h1,
+h3 {
+    font-family: "Agency FB";
+}
+
+html {
+    overflow-x: hidden;
+    height: 100%;
+    scroll-behavior: smooth !important;
+}
+
+body {
+    height: 100%;
+    overflow-x: hidden;
+    background: #fff;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth !important;
+    
+}
+
+.heading {
+    padding: 20px 0;
+    margin-bottom: 5px;
+    font-size: 3.6rem;
+    text-align: center;
+}
+
+main {
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.infobox {
+    width: 70%;
+    height: fit-content;
+    margin: 20px auto 0;
+    text-align: start;
+    font-size: 1.8rem;
+    padding: 15px 10px 20px;
+    background-color: var(--yellow);
+    opacity: 80%;
+    border: solid var(--brown) 1px;
+}
+
+
+/*---Wrapper---*/
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+/*---Theme style---*/
+
+.theme-page {
+    color: var(--black);   
+}
+
+
+/*Header & Navbar*/
+
+
+.header {
+    display: block;
+    margin: 0 auto;
+
+    width: 100%;
+    max-width: 100%;
+    box-shadow: none;
+    background-color: var(--lightred);
+    height: 60px !important;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.mainInner {
+    display: table;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+.mainInner div {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 1.25px;
+}
+
+#sidebarMenu {
+    height: fit-content;
+    position: fixed;
+    left: 0;
+    width: 180px;
+    margin-top: 60px;
+    transform: translateX(-250px);
+    transition: transform 250ms ease-in-out;
+    background: var(--yellow);
+    z-index: 9;
+    
+    box-shadow: 1px 1px 1px 1px;
+}
+
+.sidebarMenuInner {
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.sidebarMenuInner li {
+    list-style: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 20px;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.sidebarMenuInner li:first-child {
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.sidebarMenuInner li span {
+    display: block;
+    font-size: 1.8rem;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.50);
+}
+
+.sidebarMenuInner li a {
+    color: var(--black);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.8rem;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+input[type="checkbox"]:checked~#sidebarMenu {
+    transform: translateX(0);
+}
+
+input[type=checkbox] {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    display: none;
+}
+
+.sidebarIconToggle {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    cursor: pointer;
+    position: absolute;
+    z-index: 99;
+    height: 100%;
+    width: 100%;
+    top: 22px;
+    left: 15px;
+    height: 22px;
+    width: 22px;
+}
+
+.spinner {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background-color: var(--yellow);
+    border: var(--black) solid 0.5px;
+}
+
+.horizontal {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    margin-top: 3px;
+
+
+}
+
+.diagonal.part-1 {
+    position: relative;
+    transition: all 0.3s;
+    box-sizing: border-box;
+    float: left;
+}
+
+.diagonal.part-2 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    margin-top: 3px;
+}
+
+input[type=checkbox]:checked~.sidebarIconToggle>.horizontal {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    opacity: 0;
+}
+
+input[type=checkbox]:checked~.sidebarIconToggle>.diagonal.part-1 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    transform: rotate(135deg);
+    margin-top: 8px;
+}
+
+input[type=checkbox]:checked~.sidebarIconToggle>.diagonal.part-2 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    transform: rotate(-135deg);
+    margin-top: -9px;
+}
+
+#menulogo {
+    width: 75px;
+    padding: 10% 30%;
+    display: none;
+}
+
+#logobox {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+#pinklogo {
+    display: none;
+
+}
+
+#blacklogo {
+    width: 45px;
+
+
+    padding: 2% 3%;
+}
+
+
+/*Produkter*/
+
+#topbox {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 0;
+    height: fit-content;
+    background-color: var(--lightred);
+}
+
+#subbox {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 0;
+    height: fit-content;
+    background-color: var(--lightgrey);
+}
+
+#infobox1 {
+    font-size: 1.8rem;
+}
+
+#infobox2 {
+    font-size: 1.8rem;
+}
+
+.product-image {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 80%;
+}
+
+
+/*---Fact cards---*/
+
+#factbox {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.fact-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: var(--lightred);
+}
+
+.fact-flexbox {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--lightred);
+}
+
+#fact-paragraph {
+    width: 60%;
+    align-self: center;
+    text-align: center;
+    font-size: 2rem;
+    padding-bottom: 20px;
+}
+
+
+.card {
+    border: solid var(--brown) 1px;
+    width: 200px;
+    height: 250px;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    background-color: var(--yellow);
+    opacity: 80%;
+}
+
+
+.card-heading {
+    margin-bottom: 4px;
+    height: 30px;
+    padding-left: 16px;
+    font-size: 2rem;
+}
+
+.card-content {
+
+    padding: 0px 16px;
+    font-size: 1.8rem;
+    margin-top: 10px;
+    height: 150px;
+}
+
+.card-paragraph {
+    font-size: 1.8rem;
+    margin-top: 10px;
+}
+
+
+.card-top {
+    height: 35px;
+    width: 200px;
+    background-color: var(--lightgrey);
+    border-bottom: solid black;
+    margin: auto;
+    padding-top: 10px;
+}
+
+#iconbox {
+    display: flex;
+    flex-direction: row;
+    height: fit-content;
+    justify-content: space-evenly;
+    padding-top: 20px;
+}
+
+.icons {
+    max-width: 70px;
+}
+
+#vegan {
+    width: 70px;
+    padding: 10px;
+}
+
+/*Udsalg*/
+
+#sale {
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 35px 0;
+    background-color: var(--lightgrey);
+}
+
+#saleimage {
+    width: 89%;
+    align-self: center;
+    padding-bottom: 20px;
+}
+
+/*Eco*/
+
+#ecobox {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    padding-bottom: 5vh;
+    background-color: var(--lightgreen);
+}
+
+#ecoheading {
+    font-size: 3.6rem;
+    padding: 20px 0;
+}
+
+#ecotext {
+    font-size: 1.8rem;
+    padding: 10px 30px;
+}
+
+/*Konkurrence*/
+
+
+#konkurrence {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--darkgreen);
+}
+
+#konkurrencebox {
+    color: var(--black);
+    margin: 30px 20px 30px;
+    padding: 10px;
+    align-self: center;
+}
+
+.line {
+    width: 400px;
+    height: 20px;
+    align-self: center;
+    background-color: var(--lightgrey);
+    border: var(--lightgrey) solid 1px;
+}
+
+.line:first-child {
+    margin-top: 20px;
+}
+
+.line:last-child {
+    margin-bottom: 20px;
+}
+
+#ktext {
+    font-size: 1.8rem;
+    padding: 20px 10px 20px;
+    border: var(--black) solid 1px;
+    background-color: var(--lightgrey);
+}
+
+
+.instagram-media {
+    align-self: center;
+    margin-top: 30px;
+}
+
+/*---Footer---*/
+
+
+.some-image {
+    width: 32px;
+    margin-right: 16px;
+    margin-top: 16px;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 150px;
+    background-color: #333333;
+    color: var(--yellow);
+}
+
+.footer-section h4 {
+    text-decoration: underline;
+    font-size: 1.8rem;
+}
+
+#footer-address {
+    margin-top: 5px;
+    font-size: 1.3rem;
+}
+
+.footerpm {
+    text-decoration: none;
+    color: var(--yellow);
+}
+
+
+@media only screen and (min-width: 450px) {
+
+    .wrapper {
+        margin-top: -60px;
+    }
+
+    .main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header {
+        background-color: #333333;
+        height: 60px;
+    }
+
+    #menulogo {
+        width: 74px;
+        padding: 10% 30%;
+        display: list-item;
+    }
+
+    #pinklogo {
+        width: 75px;
+        float: right;
+        position: static;
+        display: list-item;
+    }
+
+    #blacklogo {
+        display: none;
+    }
+
+    #topbox {
+        display: flex;
+        flex-direction: row;
+        height: fit-content;
+        margin-top: 60px;
+        padding: 30px 0;
+        align-items: center;
+    }
+
+    .product-image {
+        flex-shrink: 0;
+    }
+
+    #subbox {
+        display: flex;
+        flex-direction: row-reverse;
+        height: fit-content;
+        padding-top: 30px;
+        align-items: center;
+
+    }
+
+    #fact-paragraph {
+        text-align: center;
+        padding-bottom: 50px;
+    }
+
+    #box2 {
+        padding-right: 100px;
+    }
+
+    .card {
+        width: 300px;
+        height: 180px;
+    }
+
+    .card-top {
+        width: inherit;
+    }
+
+    .infobox {
+        font-size: 2rem;
+        width: 40%;
+        font-family: 'Oswald';
+        letter-spacing: 1.5px;
+        height: fit-content;
+        padding: 30px;
+        overflow: visible;
+        text-align: center;
+    }
+
+    .product-image {
+        width: 48%;
+    }
+
+    .fact-section {
+        flex-direction: row;
+        justify-content: space-around;
+        height: 100vh;
+    }
+
+    .fact-flexbox {
+        flex-direction: row;
+        gap: 10rem;
+    }
+
+    #box1 {
+        display: flex;
+        flex-direction: column;
+        height: 50vh;
+        justify-content: space-between;
+    }
+
+    #box2 {
+        display: flex;
+        flex-direction: column;
+        height: 50vh;
+        justify-content: space-between;
+    }
+
+    #sale {
+        width: 100%;
+        padding-top: 30px;
+    }
+
+    #heroimage {
+        width: 40%;
+    }
+
+    #ecobox {
+        height: fit-content;
+        width: 100%;
+        padding: 30px 0;
+    }
+
+    #ecotext {
+        padding: 30px 30px;
+    }
+
+    #iconbox {
+        justify-content: flex-end;
+        align-self: center;
+        width: 43%;
+    }
+
+    #konkurrence {
+        display: flex;
+        flex-direction: row;
+        height: fit-content;
+        padding: 30px 30px;
+    }
+
+    .footer {
+        flex-direction: row;
+        height: 250px;
+    }
+
+    .footer-section h4 {
+        font-size: 2.4rem;
+    }
+
+    .footer-address {
+        font-size: 2rem
+    }
+}
