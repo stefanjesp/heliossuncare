@@ -1,0 +1,7 @@
+User-agent: Googlebot 
+Disallow: /nogooglebot/
+
+User-agent: AdsBot-Google 
+Disallow: /adsbot-google/
+
+Sitemap: http://helios.sjespersgaard.dk/sitemap.xml 
